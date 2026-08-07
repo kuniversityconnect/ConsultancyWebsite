@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-University Connect | Study in South Korea from India</title>
+    <meta name="description" content="K-University Connect helps Indian students study in South Korea with complete guidance including admissions, scholarships, visa assistance, accommodation, airport pickup and continuous support throughout university life Hint.">
+    <meta name="keywords" content="Study in Korea, South Korea Universities, Korean Scholarships, GKS Scholarship, Masters in Korea, Bachelor in Korea, PhD Korea, Korean Language Program">
+    <meta name="author" content="K-University Connect">
+    
+    <meta property="og:title" content="K-University Connect | Study Abroad South Korea">
+    <meta property="og:description" content="Complete Dual-Continent Higher Education Guidance for South Korea. From application profiling to post-arrival support until graduation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kuniversityconnect.com">
+    <meta name="theme-color" content="#0F4C97">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "K-University Connect",
+      "url": "https://www.kuniversityconnect.com",
+      "description": "Premium educational consultant bridging Indian scholars with elite South Korean universities and fully funded scholarship pathways.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "offers": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Global Korea Scholarship Consultation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "South Korean University Admissions Engineering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Post-Arrival Settlement Support"}}
+      ],
+      "sameAs": [
+        "https://www.youtube.com/@KUniversityConnect",
+        "https://www.instagram.com/kuniversityconnect"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- GLOBAL BASE CLEANUP --- */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        html{
+            scroll-behavior:smooth;
+        }
+        body{
+            font-family:'Inter',sans-serif;
+            background:#ffffff;
+            color:#1F2937;
+            overflow-x:hidden;
+        }
+        img{
+            max-width:100%;
+            display:block;
+        }
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+        button{
+            font-family:inherit;
+            cursor:pointer;
+        }
+        section{
+            padding:100px 8%;
+        }
+        .container{
+            max-width:1400px;
+            margin:auto;
+        }
+        h1,h2,h3,h4{
+            font-family:'Poppins',sans-serif;
+            color: var(--dark-navy);
+        }
+
+        /* --- THE LOGO PALETTE ROOT --- */
+        :root {
+            --primary: #0F4C97;          /* Royal Blue */
+            --primary-light: #1A5FA8;    /* Interactive Blue state */
+            --dark-navy: #0A2E5D;        /* Deep Premium Title Blue */
+            --gold: #D4AF37;             /* Rich Gold Branding Accent */
+            --gold-light: #FBF6E6;       /* Soft Light Creamy Gold Accent tint */
+            --dark: #0A2E5D;             
+            --text: #4B5563;             /* Optimized gray-charcoal for clean typography body text */
+            --light: #6B7280;            
+            --border: #E5E7EB;           
+            --background: #FFFFFF;       
+            --section: #F5F7FA;          /* Clean Light Gray Section Canvas */
+            --shadow: 0 15px 40px rgba(10, 46, 93, 0.05);
+            --radius: 18px;
+        }
+
+        /* --- NAVIGATION --- */
+        header{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            background:white;
+            z-index:9999;
+            border-bottom:1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(10, 46, 93, 0.02);
+            transition:.3s;
+        }
+        .nav-container{
+            max-width:1350px;
+            margin:auto;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:16px 7%;
+        }
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+        .logo-icon {
+            width: 96px;
+            height: 96px;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            padding: 6px;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .logo-text h2{
+            font-size:21px;
+            font-weight:700;
+            color: var(--dark-navy);
+        }
+        .logo-text p{
+            font-size:12px;
+            color:var(--light);
+            margin-top:2px;
+        }
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:32px;
+            align-items:center;
+        }
+        nav ul li a{
+            font-size:15px;
+            font-weight:600;
+            color: var(--text);
+            transition:.3s;
+        }
+        nav ul li a:hover{
+            color:var(--primary);
+        }
+        .mobile-menu{
+            display:none;
+            font-size:30px;
+            cursor:pointer;
+            color: var(--dark-navy);
+        }
+
+        /* Social Icons in Header & Footer */
+        .header-social {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 10px;
+        }
+        .social-icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--section);
+            color: var(--dark-navy);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .social-icon-btn:hover {
+            background: var(--primary);
+            color: #ffffff !important;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .social-icon-btn.youtube:hover {
+            background: #FF0000;
+            border-color: #FF0000;
+        }
+        .social-icon-btn.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-color: #dc2743;
+        }
+        .social-icon-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Footer Social Media Styling */
+        .footer-social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+        }
+        .footer-social-links .social-icon-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* --- GLOBAL SECTION TITLE HANDLING --- */
+        .section-title{
+            text-align:center;
+            margin-bottom:70px;
+            max-width:850px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .section-title span{
+            display:inline-block;
+            padding:8px 20px;
+            background: var(--gold-light);
+            color: var(--dark-navy);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius:50px;
+            font-weight:700;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            margin-bottom:20px;
+        }
+        .section-title h2{
+            font-size:40px;
+            line-height:1.3;
+            margin-bottom:20px;
+        }
+        .section-title p{
+            font-size:18px;
+            color:var(--text);
+            line-height:32px;
+        }
+
+        /* --- BUTTON ARCHITECTURE --- */
+        .primary-btn, .consult-btn, .submit-btn {
+            background: var(--primary);
+            color: white !important;
+            padding: 16px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            display: inline-block;
+            border: 2px solid transparent;
+            box-shadow: 0 10px 25px rgba(15, 76, 151, 0.15);
+            transition: .35s ease;
+        }
+        .primary-btn:hover, .consult-btn:hover, .submit-btn:hover {
+            background: var(--dark-navy);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(10, 46, 93, 0.2);
+        }
+        .secondary-btn{
+            border:2px solid var(--primary);
+            padding:15px 32px;
+            border-radius:60px;
+            font-weight:700;
+            color:var(--primary);
+            display: inline-block;
+            background: transparent;
+            transition:.35s ease;
+        }
+        .secondary-btn:hover{
+            background:var(--primary);
+            color:white;
+            transform: translateY(-3px);
+        }
+
+        /* --- IMMERSIVE HERO SEGMENT --- */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            background: var(--dark-navy);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #ffffff;
+            text-align: center;
+            padding: 140px 0 0 0;
+        }
+        .hero-image-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/herosummer.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        .hero-container {
+            position: relative;
+            max-width: 950px;
+            padding: 0 20px;
+            margin-bottom: 60px;
+            z-index: 2;
+        }
+        .hero-tag{
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+            padding:10px 20px;
+            border-radius:50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom:25px;
+            backdrop-filter: blur(4px);
+        }
+        .hero-content h1 {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+        .hero-content h1 span {
+            color: var(--gold);
+        }
+        .hero-content p {
+            font-size: 19px;
+            color: #e2e8f0;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-buttons{
+            display:flex;
+            gap:20px;
+            justify-content: center;
+            flex-wrap:wrap;
+        }
+        .hero-section .secondary-btn {
+            border-color: white;
+            color: white;
+        }
+        .hero-section .secondary-btn:hover {
+            background: white;
+            color: var(--dark-navy);
+        }
+
+        .hero-badge-footer {
+            position: relative;
+            width: 100%;
+            background: linear-gradient(rgba(15, 76, 151, 0.85), rgba(10, 46, 93, 0.92)), url('hero-summer (1).jpg');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-top: 2px solid var(--gold);
+            padding: 30px 0;
+            z-index: 10;
+        }
+        .hero-tiles-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .footer-tile {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .footer-tile:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .tile-icon {
+            font-size: 28px;
+            line-height: 1;
+        }
+        .tile-text h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .tile-text p {
+            font-size: 12px;
+            color: #f1f5f9;
+            margin: 0 !important;
+            line-height: 1.3;
+        }
+
+        /* --- WHY KOREA ARCHITECTURE --- */
+        .why-korea{
+            background:var(--section);
+        }
+        .why-korea-split-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .split-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .split-card.students-track {
+            border-top: 5px solid var(--primary);
+        }
+        .split-card.parents-track {
+            border-top: 5px solid var(--gold);
+        }
+        .split-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .split-card ul {
+            list-style: none;
+        }
+        .split-card li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 15px;
+            color: var(--text);
+        }
+        .split-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .why-korea-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:30px;
+        }
+        .korea-card{
+            background:white;
+            padding:40px 30px;
+            border-radius:20px;
+            box-shadow:var(--shadow);
+            transition:.35s;
+            border:1px solid var(--border);
+        }
+        .korea-card:hover{
+            transform:translateY(-8px);
+            border-color: var(--gold);
+        }
+        .korea-card .icon{
+            font-size:40px;
+            margin-bottom:20px;
+        }
+        .korea-card h3{
+            margin-bottom:14px;
+            font-size:22px;
+        }
+        .korea-card p{
+            color:var(--text);
+            line-height:28px;
+            font-size: 15px;
+        }
+
+        /* --- HORIZONTAL JOURNEY PATH --- */
+        .journey-section{
+            background: var(--section);
+        }
+        .horizontal-journey {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+            margin-top: 40px;
+        }
+        .journey-node {
+            background: white;
+            padding: 30px 24px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: .3s;
+        }
+        .journey-node:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+        .node-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .node-num {
+            width: 36px;
+            height: 36px;
+            background: var(--dark-navy);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            border: 2px solid var(--gold);
+        }
+        .node-icon {
+            font-size: 24px;
+        }
+        .journey-node h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark-navy);
+        }
+        .journey-node p {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 22px;
+        }
+
+        /* --- COMPETITIVE MATRIX ARRANGEMENT --- */
+        .comparison{
+            background: white;
+        }
+        .comparison-grid{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:40px;
+        }
+        .compare-card{
+            background: var(--section);
+            padding:45px 35px;
+            border-radius:22px;
+            position:relative;
+            border: 1px solid var(--border);
+            box-shadow:var(--shadow);
+        }
+        .compare-card.ours {
+            background: white;
+            border: 2px solid var(--gold);
+        }
+        .compare-card h3{
+            margin-bottom:25px;
+            font-size:26px;
+        }
+        .compare-card ul{
+            list-style:none;
+        }
+        .compare-card li{
+            padding:14px 0;
+            border-bottom:1px solid var(--border);
+            font-size:16px;
+            color: var(--text);
+        }
+        .best-tag {
+            position: absolute;
+            top: -14px;
+            right: 30px;
+            background: var(--gold);
+            color: var(--dark-navy);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+        }
+
+        /* --- CAMPUS UNIVERSITY PROFILES --- */
+        .universities{
+            background: var(--section);
+        }
+        .university-grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:24px;
+        }
+        .university-card{
+            background:white;
+            padding:35px 22px;
+            border-radius:20px;
+            text-align:center;
+            border: 1px solid var(--border);
+            box-shadow:var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transition:.35s;
+        }
+        .university-card:hover{
+            transform:translateY(-8px);
+            border-color: var(--gold);
+        }
+        .university-card img{
+            height:65px;
+            width:auto;
+            margin:0 auto 20px;
+            object-fit:contain;
+        }
+        .university-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .university-card span{
+            display:inline-block;
+            margin:10px auto;
+            background: var(--section);
+            padding:4px 14px;
+            border-radius:30px;
+            color: var(--dark-navy);
+            border: 1px solid var(--border);
+            font-weight:600;
+            font-size: 13px;
+        }
+        .university-card p{
+            line-height:22px;
+            color:var(--text);
+            margin:10px 0 20px;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+        .university-card a{
+            color:var(--primary);
+            font-weight:700;
+            font-size: 14px;
+            transition: color 0.3s;
+            border-top: 1px solid var(--border);
+            padding-top: 15px;
+            display: block;
+        }
+        .university-card a:hover {
+            color: var(--dark-navy);
+        }
+
+        /* --- FINANCIAL SCHOLARSHIPS ELEMENTS --- */
+        .scholarships{
+            background:white;
+        }
+        .scholarship-grid{
+            display:grid;
+            grid-template-columns:repeat(5, 1fr);
+            gap:16px;
+        }
+        .scholarship-card{
+            background:var(--section);
+            padding:35px 20px;
+            border-radius:20px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .scholarship-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+        .number{
+            font-size:36px;
+            font-weight:800;
+            color:var(--primary);
+            margin-bottom:12px;
+        }
+        .scholarship-card h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .scholarship-card p {
+            font-size: 13px;
+            color: var(--text);
+            line-height: 22px;
+        }
+
+        /* --- PERSUASION BOX OVERLAY (CTA) --- */
+        .cta{
+            background: linear-gradient(135deg, var(--dark-navy), var(--primary));
+            padding: 90px 8%;
+            border-bottom: 5px solid var(--gold);
+        }
+        .cta-box{
+            text-align:center;
+            color:white;
+        }
+        .cta-box h2{
+            font-size:44px;
+            margin-bottom:20px;
+            color: white;
+        }
+        .cta-box p{
+            max-width:800px;
+            margin:auto;
+            line-height:32px;
+            margin-bottom:40px;
+            font-size:18px;
+            color: #E5E7EB;
+        }
+        .cta-buttons{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+        .cta .primary-btn {
+            background: white;
+            color: var(--dark-navy) !important;
+        }
+        .cta .primary-btn:hover {
+            background: var(--gold);
+            color: var(--dark-navy) !important;
+        }
+        .cta .secondary-btn{
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        .cta .secondary-btn:hover {
+            background: white;
+            color: var(--dark-navy);
+        }
+
+        /* --- TRUSTED TESTIMONIAL CARDS --- */
+        .testimonials{
+            background:var(--section);
+        }
+        .testimonial-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:30px;
+        }
+        .testimonial-card{
+            background:white;
+            padding:40px 30px;
+            border-radius:20px;
+            border: 1px solid var(--border);
+            box-shadow:var(--shadow);
+            transition:.35s;
+        }
+        .testimonial-card:hover{
+            transform:translateY(-8px);
+            border-color: var(--gold);
+        }
+        .quote{
+            font-size:60px;
+            font-weight:700;
+            color:var(--gold);
+            line-height:1;
+            margin-bottom:10px;
+        }
+        .testimonial-card p{
+            line-height:28px;
+            color:var(--text);
+            margin-bottom:30px;
+            font-size: 15px;
+        }
+        .student{
+            display:flex;
+            align-items:center;
+            gap:15px;
+        }
+        .avatar{
+            width:50px;
+            height:50px;
+            background: var(--dark-navy);
+            border: 1px solid var(--gold);
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:white;
+            font-size:18px;
+            font-weight:700;
+        }
+        .student h4{
+            margin-bottom:2px;
+            font-size: 16px;
+        }
+        .student span{
+            color:var(--light);
+            font-size: 13px;
+        }
+
+        /* --- ACCORDION FAQ PANELS --- */
+        .faq{
+            background:white;
+        }
+        .faq-container{
+            max-width:900px;
+            margin:auto;
+        }
+        .faq-item{
+            margin-bottom:16px;
+            border:1px solid var(--border);
+            border-radius:14px;
+            overflow:hidden;
+            transition: border-color 0.3s;
+        }
+        .faq-item:hover {
+            border-color: var(--primary);
+        }
+        .faq-question{
+            width:100%;
+            background:white;
+            border:none;
+            padding:24px 28px;
+            font-size:18px;
+            font-weight:600;
+            color: var(--dark-navy);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            cursor:pointer;
+            text-align: left;
+        }
+        .faq-question span{
+            font-size:26px;
+            color:var(--primary);
+            transition:.3s;
+        }
+        .faq-answer{
+            max-height:0;
+            overflow:hidden;
+            transition:.3s ease-out;
+        }
+        .faq-answer p{
+            padding:0 28px 24px;
+            line-height:28px;
+            color:var(--text);
+            font-size: 15px;
+        }
+        .faq-item.active .faq-answer{
+            max-height:300px;
+        }
+        .faq-item.active .faq-question span{
+            transform:rotate(45deg);
+            color: var(--gold);
+        }
+
+        /* --- THE INTAKE FORM CONSOLE --- */
+        .consultation{
+            background:var(--section);
+        }
+        .consult-wrapper{
+            display:grid;
+            grid-template-columns:1fr 1.15fr;
+            gap:70px;
+            align-items:start;
+        }
+        .section-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #FFFBEB;
+            color: var(--dark-navy);
+            border: 1px solid #FEF3C7;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        .consult-left h2{
+            font-size:42px;
+            margin-bottom:25px;
+            line-height:1.2;
+        }
+        .consult-left p{
+            line-height:30px;
+            color:var(--text);
+            font-size:17px;
+            margin-bottom:35px;
+        }
+        .benefits{
+            display:flex;
+            flex-direction:column;
+            gap:25px;
+        }
+        .benefit{
+            display:flex;
+            gap:20px;
+            align-items:center;
+        }
+        .benefit-icon{
+            width:54px;
+            height:54px;
+            border-radius:14px;
+            background: var(--dark-navy);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:22px;
+            color:white;
+            flex-shrink:0;
+            box-shadow: var(--shadow);
+        }
+        .benefit h4{
+            margin-bottom:4px;
+            font-size:18px;
+        }
+        .benefit p{
+            margin:0;
+            font-size:14px;
+            line-height:24px;
+            color: var(--text);
+        }
+        .consult-right{
+            background:white;
+            padding:45px;
+            border-radius:24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 45px rgba(10, 46, 93, 0.05);
+        }
+        .form-grid{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:20px;
+        }
+        .form-group{
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+            margin-bottom:20px;
+        }
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+        .form-group label{
+            font-size:14px;
+            font-weight:700;
+            color: var(--dark-navy);
+        }
+        .form-group input, .form-group select, .form-group textarea{
+            padding:14px 18px;
+            border:1px solid var(--border);
+            border-radius:10px;
+            font-size:15px;
+            font-family:inherit;
+            background:#F9FAFB;
+            outline:none;
+            transition:.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus{
+            border-color:var(--primary);
+            background:white;
+            box-shadow: 0 0 0 4px rgba(15, 76, 151, 0.06);
+        }
+
+        /* --- FOOTER LAYOUT --- */
+        footer{
+            background: var(--dark-navy);
+            color:white;
+            padding:80px 8% 40px;
+            border-top: 6px solid var(--gold);
+        }
+        .footer-grid{
+            display:grid;
+            grid-template-columns:1.2fr .8fr .6fr .8fr;
+            gap:50px;
+            margin-bottom:60px;
+        }
+        .footer-brand p{
+            font-size:14px;
+            line-height:24px;
+            color:#9CA3AF;
+            margin-top:15px;
+        }
+        footer h4{
+            color:white;
+            font-size:18px;
+            margin-bottom:25px;
+            position:relative;
+        }
+        footer h4::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: var(--gold);
+        }
+        footer ul{
+            list-style:none;
+            display:flex;
+            flex-direction:column;
+            gap:14px;
+        }
+        footer ul li a{
+            font-size:14px;
+            color:#9CA3AF;
+            transition:.3s;
+        }
+        footer ul li a:hover{
+            color:white;
+            padding-left:4px;
+        }
+        footer p {
+            font-size: 14px;
+            color: #9CA3AF;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+        .copyright{
+            text-align:center;
+            padding-top:40px;
+            border-top:1px solid rgba(255,255,255,0.08);
+            font-size:13px;
+            color:#6B7280;
+        }
+
+        /* --- STYLESHEET RESPONSIVE ADAPTABILITY BREAKPOINTS --- */
+        @media(max-width:1150px){
+            .hero-content h1{ font-size:42px; }
+            .why-korea-grid, .university-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-korea-split-grid { grid-template-columns: 1fr; }
+            .horizontal-journey { grid-template-columns: repeat(2, 1fr); }
+            .scholarship-grid { grid-template-columns: repeat(3, 1fr); }
+            .consult-wrapper { grid-template-columns: 1fr; gap: 40px; }
+        }
+        @media(max-width: 950px) {
+            .hero-section {
+                height: auto;
+                padding-bottom: 0;
+            }
+            .hero-badge-footer {
+                position: relative;
+                padding: 30px 20px;
+            }
+            .hero-tiles-container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0;
+                gap: 12px;
+            }
+        }
+        @media(max-width:768px){
+            section{ padding:70px 5%; }
+            nav ul{ display:none; position:absolute; top:100%; left:0; width:100%; background:white; padding:30px; border-bottom:1px solid var(--border); box-shadow:0 10px 20px rgba(0,0,0,0.05); }
+            nav ul.active{ display:flex; flex-direction:column; gap:22px; align-items:flex-start; }
+            .mobile-menu{ display:block; }
+            .hero-section { padding: 140px 20px 0; }
+            .hero-content h1{ font-size:34px; }
+            .hero-content p{ font-size:16px; }
+            .why-korea-grid, .university-grid, .testimonial-grid, .scholarship-grid, .horizontal-journey, .form-grid, .footer-grid{ grid-template-columns:1fr; }
+            .section-title h2{ font-size:28px; }
+            .form-group.full-width { grid-column: span 1; }
+            .header-social { margin-left: 0; margin-top: 10px; }
+        }
+        @media(max-width: 480px) {
+            .hero-tiles-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><img src="images/KUC Logo.png" alt="K-University Connect Icon"></div>
+                <div class="logo-text">
+                    <h2>K-University Connect</h2>
+                    <p>Your Complete Korea Journey Partner</p>
+                </div>
+            </div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">Why Korea?</a></li>
+                    <li><a href="#services">Why Us?</a></li>
+                    <li><a href="#universities">Universities</a></li>
+                    <li><a href="#scholarships">Scholarships</a></li>
+                    <li><a href="#journey">Student Journey</a></li>
+                    <li><a href="#consultation" class="consult-btn">Book Free Consultation</a></li>
+                    <!-- <li class="header-social">
+                        <a href="https://www.youtube.com/@KUniversityConnect" target="_blank" class="social-icon-btn youtube" title="YouTube" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/kuniversityconnect" target="_blank" class="social-icon-btn instagram" title="Instagram" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </li> -->
+                </ul>
+            </nav>
+            <div class="mobile-menu" id="menuButton">☰</div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-image-placeholder"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">🇮🇳 India → 🇰🇷 South Korea</div>
+                <h1>Unlock World-Class Education in <span>South Korea</span></h1>
+                <p>Your end-to-end gateway from preparation to placement. With permanent, full-time teams in both India and South Korea, we don't just guide you from a distance—we manage your entire journey on the ground, securing fully funded global degrees</p>
+                <div class="hero-buttons">
+                    <a href="#consultation" class="primary-btn">Book Free Consultation</a>
+                    <a href="#about" class="secondary-btn">Explore Why Korea</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-badge-footer">
+            <div class="hero-tiles-container">
+                <div class="footer-tile">
+                    <span class="tile-icon">🇰🇷</span>
+                    <div class="tile-text">
+                        <h4>Dedicated Korea Team</h4>
+                        <p>On-ground Permanent residents in Seoul</p>
+                    </div>
+                </div>
+                <div class="footer-tile">
+                    <span class="tile-icon">🇮🇳</span>
+                    <div class="tile-text">
+                        <h4>Dedicated India Team</h4>
+                        <p>Local document & profiling support</p>
+                    </div>
+                </div>
+                <div class="footer-tile">
+                    <span class="tile-icon">🏫</span>
+                    <div class="tile-text">
+                        <h4>10+ Partner Universities</h4>
+                        <p>Direct premium campus Partners</p>
+                    </div>
+                </div>
+                <div class="footer-tile">
+                    <span class="tile-icon">🎓</span>
+                    <div class="tile-text">
+                        <h4>20+ Students Placed</h4>
+                        <p>Successful active scholar network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="why-korea">
+        <div class="container">
+            <div class="section-title">
+                <span>THE LAND OF OPPORTUNITY & SAFETY</span>
+                <h2>Why Indian Students (and Parents) Trust South Korea</h2>
+                <p>Sending your child abroad is a monumental family decision. South Korea seamlessly bridges world-class career growth for students with the strict standards of safety, affordability, and health that Indian parents demand.</p>
+            </div>
+
+            <div class="why-korea-split-grid">
+                <div class="split-card students-track">
+                    <h3><span>🎓</span> Key Message for Students</h3>
+                    <ul>
+                        <li><strong>Tech & Innovation Hub:</strong> Study in the home of tech giants like Samsung, Hyundai, KIA, SK Hynix and LG.</li>
+                        <li><strong>Global Job Pipelines:</strong> Access specialized D-10 post-study job seeker visas extending up to 3 years.</li>
+                        <li><strong>Pop Culture & Lifestyle:</strong> Experience the vibrant, creative, and globalized atmosphere of modern K-Culture directly.</li>
+                        <li><strong>English-Taught Tracks:</strong> Top programs offer complete curricula fully instructed in English.</li>
+                        <li><strong>Scholarships</strong> Few Universities and Companies offer scholarships for the Masters Students</li>
+                    </ul>
+                </div>
+                <div class="split-card parents-track">
+                    <h3><span>🛡️</span> Key Message for Parents</h3>
+                    <ul>
+                        <li><strong>Unmatched Global Safety:</strong> Ranked at the absolute top globally for low crime levels, night transit monitoring, and smart public cameras.</li>
+                        <li><strong>Affordable Premium Degrees:</strong> World-recognized degrees costing roughly 1/5th of equivalent choices in the USA or UK.</li>
+                        <li><strong>Dietary Accommodations:</strong> Widespread availability of Indian provisions, vegetarian choices, and functional kitchens inside campus dormitories.</li>
+                        <li><strong>Permanent On-Ground Care:</strong> Our full-time team resides permanently in Seoul to manage arrival logistics, airport pickups, campus registration, and essential local setup. We ensure your child never feels isolated, serving as a reliable on-the-ground contact to help them confidently navigate daily life and unexpected logistical challenges in a new country.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="why-korea-grid">
+               <div class="korea-card">
+    <div class="icon">🛡️</div>
+    <h3>An Elite Global Safety Hub with Local On-Ground Support</h3>
+    <p>South Korea is globally celebrated for its exceptional safety, boasting crime rates significantly lower than most international student destinations. With advanced public infrastructure, extensive CCTV networks, and secure transit systems active well past midnight, students enjoy a highly secure environment. To help them transition smoothly into this new culture, our permanent team living in South Korea is there on the ground to manage arrival logistics, airport pickups, and local university registration.</p>
+</div>
+                <div class="korea-card">
+    <div class="icon">🇮🇳</div>
+    <h3>Cultural Comfort & Dietary Freedom Without Compromise</h3>
+    <p>Sending your child abroad shouldn’t mean compromising their lifestyle or dietary habits. South Korea seamlessly accommodates global diets, offering highly accessible Indian grocery hubs, alongside certified Pure Vegetarian, Vegan, and Halal options across all major cities. Additionally, premium university housing features fully optimized student kitchen bays, making it effortless to prepare traditional home-cooked comfort food daily.</p>
+</div>
+                <div class="korea-card">
+    <div class="icon">🔬</div>
+    <h3>World-Class Global Degrees at 1/5th the Cost of the West</h3>
+    <p>Achieve premium global academic prestige without the financial burden. Top South Korean universities consistently outrank western elite institutions in global QS metrics, with degrees fully recognized by the Association of Indian Universities (AIU). At a fractional ₹6–14L/year compared to the staggering ₹25–50L/year in the US or UK, Korea offers unmatched ROI. Furthermore, we specialize in unlocking fully funded pathways like the Global Korea Scholarship (GKS), covering 100% of tuition, flights, and a generous monthly living stipend.</p>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="comparison">
+        <div class="container">
+            <div class="section-title">
+                <span>COMPARE SERVICES</span>
+                <h2>Why We Offer Unparalleled Value</h2>
+                <p>Most consultancies disappear the moment your visa gets stamped. We don't. With dedicated teams rooted in both India and South Korea, K-University Connect is by your side from your very first application form to your first day on a Korean campus—and every milestone after.</p>
+            </div>
+            <div class="comparison-grid">
+                <div class="compare-card">
+                    <h3>Typical Consultants</h3>
+                    <ul>
+                        <li>✅ University Admission</li>
+                        <li>✅ Documentation</li>
+                        <li>✅ Scholarship Guidance</li>
+                        <li>✅ Visa Assistance</li>
+                        <li>❌ Accommodation Support</li>
+                        <li>❌ Airport Pickup</li>
+                        <li>❌ SIM Card Assistance</li>
+                        <li>❌ Bank Account Guidance</li>
+                        <li>❌ ARC Guidance</li>
+                        <li>❌ Internship Guidance</li>
+                        <li>❌ Career Guidance</li>
+                        <li>❌ Startup Guidance</li>
+                        <li>❌ Student Support After Arrival</li>
+                    </ul>
+                </div>
+                <div class="compare-card ours">
+                    <div class="best-tag">RECOMMENDED</div>
+                    <h3>K-University Connect</h3>
+                    <ul>
+                        <li>✅ University Admission</li>
+                        <li>✅ Documentation</li>
+                        <li>✅ Scholarship Guidance</li>
+                        <li>✅ Visa Assistance</li>
+                        <li>✅ Airport Pickup</li>
+                        <li>✅ Accommodation Assistance</li>
+                        <li>✅ SIM Card Assistance</li>
+                        <li>✅ Bank Account Guidance</li>
+                        <li>✅ ARC Registration</li>
+                        <li>✅ Internship Guidance</li>
+                        <li>✅ Career Guidance</li>
+                        <li>✅ Startup Guidance</li>
+                        <li>✅ Continuous Student Assistance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="universities" class="universities">
+        <div class="container">
+            <div class="section-title">
+                <span>TOP UNIVERSITIES</span>
+                <h2>Study in South Korea's Leading Universities</h2>
+                <p>We help students apply to some of the best universities in South Korea based on their academic profile, career goals and scholarship opportunities.</p>
+            </div>
+            <div class="university-grid">
+                <div class="university-card">
+                    <img src="images/SNU.svg" alt="SNU Logo">
+                    <h3>Seoul National University</h3>
+                    <span>Seoul</span>
+                    <p>South Korea's highest ranked national university with world-class research opportunities.</p>
+                    <a href="https://en.snu.ac.kr" target="_blank">Visit Website →</a>
+                </div>
+                <div class="university-card">
+                    <img src="images/kaist.svg" alt="KAIST Logo">
+                    <h3>KAIST</h3>
+                    <span>Daejeon</span>
+                    <p>Leading science and technology university renowned for engineering and AI research.</p>
+                    <a href="https://www.kaist.ac.kr" target="_blank">Visit Website →</a>
+                </div>
+                <div class="university-card">
+                    <img src="images/yonsei.svg" alt="Yonsei Logo">
+                    <h3>Yonsei University</h3>
+                    <span>Seoul</span>
+                    <p>One of Korea's SKY universities with excellent international student support.</p>
+                    <a href="https://www.yonsei.ac.kr" target="_blank">Visit Website →</a>
+                </div>
+                <div class="university-card">
+                    <img src="images/korea.svg" alt="KU Logo">
+                    <h3>Korea University</h3>
+                    <span>Seoul</span>
+                    <p>Prestigious private university known for its extensive alumni network and business tracks.</p>
+                    <a href="https://www.korea.edu" target="_blank">Visit Website →</a>
+                </div>
+                <div class="university-card">
+                    <img src="images/SKKU.svg" alt="SKKU Logo">
+                    <h3>Sungkyunkwan University (SKKU)</h3>
+                    <span>Suwon</span>
+                    <p>Deep historic institutional heritage paired with immense investment from tech giant Samsung.</p>
+                    <a href="https://www.skku.edu" target="_blank">Visit Website →</a>
+                </div>
+                <div class="university-card">
+                    <img src="images/hanyang.svg" alt="Hanyang Logo">
+                    <h3>Hanyang University</h3>
+                    <span>Seoul</span>
+                    <p>Famous for elite engineering curricula and top rankings in domestic startup placement metrics.</p>
+                    <a href="https://www.hanyang.ac.kr" target="_blank">Visit Website →</a>
+                </div>
+                <div class="university-card">
+                    <img src="images/pohang.svg" alt="Pohang Logo">
+                    <h3>Pohang</h3>
+                    <span>Pohang</span>
+                    <p>Highly specialized, private technical powerhouse running world-class advanced labs.</p>
+                    <a href="https://www.pohang.ac.kr" target="_blank">Visit Website →</a>
+                </div>
+                <div class="university-card">
+                    <img src="images/kyunghee.png" alt="Kyung Hee Logo">
+                    <h3>Kyung Hee University</h3>
+                    <span>Seoul</span>
+                    <p>Renowned global study links with exceptional visual arts and humanities tracks.</p>
+                    <a href="https://www.khu.ac.kr" target="_blank">Visit Website →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scholarships" class="scholarships">
+        <div class="container">
+            <div class="section-title">
+                <span>FUNDING YOUR EDUCATION</span>
+                <h2>Scholarships Available For International Students</h2>
+                <p>We help students maximize scholarship opportunities before applying.</p>
+            </div>
+            <div class="scholarship-grid">
+                <div class="scholarship-card">
+                    <div class="number">01</div>
+                    <h3>Global Korea Scholarship (GKS)</h3>
+                    <p>Fully funded scholarship covering tuition, living expenses, airfare and settlement allowance.</p>
+                </div>
+                <div class="scholarship-card">
+                    <div class="number">02</div>
+                    <h3>University Scholarships</h3>
+                    <p>Merit-based tuition reductions offered directly by Korean universities.</p>
+                </div>
+                <div class="scholarship-card">
+                    <div class="number">03</div>
+                    <h3>Professor Funding</h3>
+                    <p>Research assistantships and laboratory funding for Master's and PhD students.</p>
+                </div>
+                <div class="scholarship-card">
+                    <div class="number">04</div>
+                    <h3>Graduate Assistantships</h3>
+                    <p>Teaching and research assistant opportunities available throughout your studies.</p>
+                </div>
+                <div class="scholarship-card">
+                    <div class="number">05</div>
+                    <h3>Corporate & Elite Foundations</h3>
+                    <p>Explore hidden scholarships like POSCO, Samsung Dream, Local K-GKS, and KOICA tracks with our specialists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="journey-section">
+        <div class="container">
+            <div class="section-title">
+                <span>YOUR PATHWAY</span>
+                <h2>The Streamlined Student Journey</h2>
+                <p>From your initial consultation in India to landing your dream corporate career in Seoul, we manage every cross-border logistical milestone.</p>
+            </div>
+            <div class="horizontal-journey">
+                <div class="journey-node">
+                    <div class="node-header">
+                        <span class="node-num">01</span>
+                        <span class="node-icon">🎯</span>
+                    </div>
+                    <h3>Profile & Target Analysis</h3>
+                    <p>Our India team checks your academic records to match you with the right universities and help you secure available scholarships.</p>
+                </div>
+                <div class="journey-node">
+                    <div class="node-header">
+                        <span class="node-num">02</span>
+                        <span class="node-icon">📂</span>
+                    </div>
+                    <h3>Streamlined Admissions Support</h3>
+                    <p>We manage your entire university application process across all your shortlisted programs, ensuring every document is perfectly prepared and completely risk-free.</p>
+                </div>
+                <div class="journey-node">
+                    <div class="node-header">
+                        <span class="node-num">03</span>
+                        <span class="node-icon">✈️</span>
+                    </div>
+                    <h3>Pre-Departure Packing</h3>
+                    <p>Before you board your flight, we secure your verified on-campus dorm rooms, finalize travel itineraries, and conduct pre-departure briefings.</p>
+                </div>
+                <div class="journey-node">
+                    <div class="node-header">
+                        <span class="node-num">04</span>
+                        <span class="node-icon">🇰🇷</span>
+                    </div>
+                    <h3>Arrival & Settlement</h3>
+                    <p>Our local South Korea team will personally pick you up at Incheon Airport and provide step-by-step guides to help you set up your local SIM card, bank account, and Alien Registration Card (ARC).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <span>SUCCESS STORIES</span>
+                <h2>Students Who Trusted K-University Connect</h2>
+                <p>Every student has a different dream. Our goal is to make that dream possible.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <p>K-University Connect made my admission process smooth. The best part was the support after arriving in Korea. I never felt alone.</p>
+                    <div class="student">
+                        <div class="avatar">V</div>
+                        <div><h4>Vijayalakshmi</h4><span>Master's Student</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <p>From university selection to my accommodation, everything was handled professionally. Highly recommended for anyone planning to study in Korea.</p>
+                    <div class="student">
+                        <div class="avatar">A</div>
+                        <div><h4>Abhishek</h4><span>Bachelor's Student</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <p>Incredible support! The airport pickup made me feel welcomed right away. Even after I started at the university, the Korea team helped me with my bank account, ARC, and accommodation. Truly grateful!.</p>
+                    <div class="student">
+                        <div class="avatar">A</div>
+                        <div><h4>Amulya</h4><span>Korean Langugage Student</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultation" class="consultation">
+        <div class="container consult-wrapper">
+            <div class="consult-left">
+                <span class="section-badge" style="background-color: #FFFBEB; color: #0A2E5D; border: 1px solid #FDE68A; padding: 10px 22px; font-weight: 700; letter-spacing: 0.5px;">FREE CONSULTATION</span>
+                <h2 style="font-size: 46px; font-weight: 800; color: #0A2E5D; margin-top: 15px;">Let's Build Your Future in South Korea</h2>
+                <p style="font-size: 17px; color: #4B5563; line-height: 1.6; margin-bottom: 40px;">Whether you're planning for a Korean Language Program, Bachelor's, Master's, PhD, or Research, our experts in India and South Korea are ready to guide you.</p>
+                
+                <div class="benefits">
+                    <div class="benefit" style="align-items: flex-start; gap: 20px; margin-bottom: 10px;">
+                        <div class="benefit-icon" style="background: #0A2E5D; border: 2px solid #D4AF37; width: 60px; height: 60px; border-radius: 16px; font-size: 24px;">🎓</div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 700; color: #0A2E5D;">University Selection</h4>
+                            <p style="font-size: 15px; color: #4B5563; margin-top: 4px;">Find the best university based on your profile.</p>
+                        </div>
+                    </div>
+                    <div class="benefit" style="align-items: flex-start; gap: 20px; margin-bottom: 10px;">
+                        <div class="benefit-icon" style="background: #0A2E5D; border: 2px solid #D4AF37; width: 60px; height: 60px; border-radius: 16px; font-size: 24px;">💰</div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 700; color: #0A2E5D;">Scholarship Guidance</h4>
+                            <p style="font-size: 15px; color: #4B5563; margin-top: 4px;">Explore funding opportunities before applying.</p>
+                        </div>
+                    </div>
+                    <div class="benefit" style="align-items: flex-start; gap: 20px; margin-bottom: 10px;">
+                        <div class="benefit-icon" style="background: #0A2E5D; border: 2px solid #D4AF37; width: 60px; height: 60px; border-radius: 16px; font-size: 24px;">🇰🇷</div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 700; color: #0A2E5D;">Complete Korea Support</h4>
+                            <p style="font-size: 15px; color: #4B5563; margin-top: 4px;">Support continues after you arrive in Korea.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="consult-right">
+                <form id="cyberIntakeForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" id="f_name" name="name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" id="f_email" name="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g., 9899999999" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Current Country *</label>
+                            <input type="text" id="country" name="country" value="India" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Highest Qualification *</label>
+                            <select id="f_baseline" name="qualification" required>
+                                <option value="">Select Qualification</option>
+                                <option value="10th">10th</option>
+                                <option value="12th">12th</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                <option value="Master's Degree">Master's Degree</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Program Interested *</label>
+                            <select id="f_objective" name="program" required>
+                                <option value="">Select Program</option>
+                                <option value="Korean Language">Korean Language</option>
+                                <option value="Bachelor's">Bachelor's</option>
+                                <option value="Master's">Master's</option>
+                                <option value="PhD">PhD</option>
+                                <option value="Research">Research</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Intake *</label>
+                        <select id="intake" name="intake" required>
+                            <option value="">Select Intake</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Fall">Fall</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Motivation to Apply *</label>
+                        <textarea id="motivation" name="motivation" rows="4" placeholder="Why do you want to study in South Korea?" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Book My Free Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>K-University Connect</h4>
+                <p>Complete dual-continent counseling architecture for absolute peace of mind from India to South Korea.</p>
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@K-UniversityConnect" target="_blank" class="social-icon-btn youtube" title="YouTube" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/k_university_connect" target="_blank" class="social-icon-btn instagram" title="Instagram" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#services">Admissions Strategy</a></li>
+                    <li><a href="#scholarships">Scholarship Filing</a></li>
+                    <li><a href="#services">Local Settlement</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#about">Why Korea?</a></li>
+                    <li><a href="#universities">Universities</a></li>
+                    <li><a href="#journey">Journey Roadmap</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Email: kuniversityconnect@gmail.com</p>
+                <p>India Office: Hyderabad, Telangana 500018</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 K-University Connect. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const navMenu = document.getElementById('navMenu');
+        if (menuButton && navMenu) {
+            menuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        document.querySelectorAll(".faq-question").forEach(question => {
+            question.addEventListener("click", () => {
+                const item = question.parentElement;
+                document.querySelectorAll(".faq-item").forEach(f => {
+                    if (f !== item) {
+                        f.classList.remove("active");
+                    }
+                });
+                item.classList.toggle("active");
+            });
+        });
+
+        document.getElementById('cyberIntakeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const payload = {
+                name: document.getElementById('f_name').value.trim(),
+                email: document.getElementById('f_email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                country: document.getElementById('country').value.trim(),
+                qualification: document.getElementById('f_baseline').value,
+                program: document.getElementById('f_objective').value,
+                intake: document.getElementById('intake').value,
+                motivation: document.getElementById('motivation').value.trim()
+            };
+
+            const GOOGLE_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzM6K-LveBwM_PcoIqB2F63-Z55j_ADrSgS/exec"; 
+            const WHATSAPP_NUMBER = "8201041123006"; 
+
+            if (GOOGLE_WEBAPP_URL && GOOGLE_WEBAPP_URL !== "") {
+                fetch(GOOGLE_WEBAPP_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).then(() => {
+                    redirectToWhatsApp(payload, WHATSAPP_NUMBER);
+                }).catch(err => {
+                    console.error("Database tracking sync failed: ", err);
+                    redirectToWhatsApp(payload, WHATSAPP_NUMBER);
+                });
+            } else {
+                redirectToWhatsApp(payload, WHATSAPP_NUMBER);
+            }
+        });
+
+        function redirectToWhatsApp(data, number) {
+            const rawWhatsappText = `*NEW STUDENT INTAKE REGISTRATION*\n` +
+                                    `===============================\n\n` +
+                                    `• *Name:* ${data.name.toUpperCase()}\n` +
+                                    `• *Email:* ${data.email}\n` +
+                                    `• *Phone:* ${data.phone}\n` +
+                                    `• *Country:* ${data.country}\n` +
+                                    `• *Qualification:* ${data.qualification}\n` +
+                                    `• *Program:* ${data.program}\n` +
+                                    `• *Intake:* ${data.intake}\n\n` +
+                                    `• *Motivation:* ${data.motivation}`;
+            window.location.href = `https://wa.me/${number}?text=${encodeURIComponent(rawWhatsappText)}`;
+        }
+    </script>
+</body>
+</html>
