@@ -1867,11 +1867,25 @@
 
     if (GOOGLE_WEBAPP_URL && GOOGLE_WEBAPP_URL !== "") {
         fetch(GOOGLE_WEBAPP_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(payload)
-        })
+    method: "POST",
+    body: new URLSearchParams(payload)
+})
+.then(() => {
+
+    console.log("Consultation sent to Google Sheet");
+
+    setTimeout(() => {
+        redirectToWhatsApp(payload, WHATSAPP_NUMBER);
+    }, 1000);
+
+})
+.catch((error) => {
+
+    console.error("Google Sheet error:", error);
+
+    redirectToWhatsApp(payload, WHATSAPP_NUMBER);
+
+});)
         .then(() => {
             // Small delay to ensure network payload dispatch before redirection
             setTimeout(() => {
