@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="canonical" href="https://kuniversityconnect.com/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-University Connect | Study in South Korea from India</title>
-    <meta name="description" content="K-University Connect helps Indian students study in South Korea with university admissions, scholarship guidance, visa assistance, pre-departure support and on-ground student support in Korea.">
+    <meta name="description" content="K-University Connect helps Indian students study in South Korea with complete guidance including admissions, scholarships, visa assistance, accommodation, airport pickup and continuous support throughout university life.">
     <meta name="keywords" content="Study in Korea, South Korea Universities, Korean Scholarships, GKS Scholarship, Masters in Korea, Bachelor in Korea, PhD Korea, Korean Language Program">
     <meta name="author" content="K-University Connect">
     
@@ -32,8 +31,8 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Post-Arrival Settlement Support"}}
       ],
       "sameAs": [
-        "https://www.youtube.com/@K-UniversityConnect",
-        "https://www.instagram.com/k_university_connect"
+        "https://www.youtube.com/@KUniversityConnect",
+        "https://www.instagram.com/kuniversityconnect"
       ]
     }
     </script>
@@ -101,6 +100,7 @@
             --section: #F5F7FA;          /* Clean Light Gray Section Canvas */
             --shadow: 0 15px 40px rgba(10, 46, 93, 0.05);
             --radius: 18px;
+            --error: #DC2626;
         }
 
         /* --- NAVIGATION --- */
@@ -278,6 +278,8 @@
             border: 2px solid transparent;
             box-shadow: 0 10px 25px rgba(15, 76, 151, 0.15);
             transition: .35s ease;
+            text-align: center;
+            width: 100%;
         }
         .primary-btn:hover, .consult-btn:hover, .submit-btn:hover {
             background: var(--dark-navy);
@@ -372,6 +374,9 @@
             gap:20px;
             justify-content: center;
             flex-wrap:wrap;
+        }
+        .hero-buttons .primary-btn {
+            width: auto;
         }
         .hero-section .secondary-btn {
             border-color: white;
@@ -879,8 +884,9 @@
         .form-group{
             display:flex;
             flex-direction:column;
-            gap:8px;
-            margin-bottom:20px;
+            gap:6px;
+            margin-bottom:16px;
+            position: relative;
         }
         .form-group.full-width {
             grid-column: span 2;
@@ -899,11 +905,27 @@
             background:#F9FAFB;
             outline:none;
             transition:.3s;
+            width: 100%;
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus{
             border-color:var(--primary);
             background:white;
             box-shadow: 0 0 0 4px rgba(15, 76, 151, 0.06);
+        }
+        /* Mobile Validation Custom Feedback */
+        .form-group input.invalid, .form-group select.invalid, .form-group textarea.invalid {
+            border-color: var(--error) !important;
+            background-color: #FEF2F2 !important;
+        }
+        .error-message {
+            display: none;
+            color: var(--error);
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+        .form-group.has-error .error-message {
+            display: block;
         }
 
         /* --- FOOTER LAYOUT --- */
@@ -1028,7 +1050,6 @@
             .header-social { margin-left: 0; margin-top: 10px; }
             .consult-right { padding: 25px 20px; }
 
-            /* Key message for students and parents font size reduction for mobile */
             .split-card li {
                 font-size: 12px !important;
                 margin-bottom: 8px !important;
@@ -1043,7 +1064,6 @@
                 margin-bottom: 12px !important;
             }
 
-            /* Mobile Side-by-Side Comparison Matrix - Adjusted strictly for Mobile View */
             .comparison-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 8px !important;
@@ -1069,7 +1089,6 @@
                 font-size: 8px !important;
             }
 
-            /* Compact Success Stories (Testimonials) */
             .testimonial-grid {
                 gap: 16px !important;
             }
@@ -1101,12 +1120,10 @@
                 font-size: 11px !important;
             }
 
-            /* Mobile-Specific Section Customizations */
             .why-korea-grid {
                 display: none;
             }
             
-            /* Top Universities Compact Layout for Mobile */
             .university-grid {
                 display: grid !important;
                 grid-template-columns: repeat(2, 1fr) !important;
@@ -1142,7 +1159,6 @@
                 border-top: 1px solid var(--border) !important;
             }
 
-            /* Funding Your Education Compact Layout for Mobile */
             .scholarship-grid {
                 display: grid !important;
                 grid-template-columns: repeat(2, 1fr) !important;
@@ -1168,7 +1184,6 @@
                 overflow: hidden;
             }
 
-            /* Streamlined Student Journey Compact Layout for Mobile */
             .horizontal-journey {
                 display: grid !important;
                 grid-template-columns: repeat(2, 1fr) !important;
@@ -1201,7 +1216,6 @@
                 overflow: hidden;
             }
 
-            /* Let's build your future in South Korea (Consultation Section) Compact Mode for Mobile */
             .consult-left h2 {
                 font-size: 24px !important;
                 margin-bottom: 12px !important;
@@ -1633,26 +1647,30 @@
             </div>
             
             <div class="consult-right">
-                <form id="cyberIntakeForm">
+                <form id="cyberIntakeForm" novalidate>
                     <div class="form-grid">
                         <div class="form-group">
-                            <label>Full Name *</label>
-                            <input type="text" id="f_name" name="name" placeholder="Your Full Name" required>
+                            <label for="f_name">Full Name *</label>
+                            <input type="text" id="f_name" name="name" placeholder="Your Full Name" required autocomplete="name">
+                            <span class="error-message">Please enter your full name</span>
                         </div>
                         <div class="form-group">
-                            <label>Email *</label>
-                            <input type="email" id="f_email" name="email" placeholder="example@email.com" required>
+                            <label for="f_email">Email *</label>
+                            <input type="email" id="f_email" name="email" placeholder="example@email.com" required inputmode="email" autocomplete="email">
+                            <span class="error-message">Please enter a valid email address</span>
                         </div>
                         <div class="form-group">
-                            <label>Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" placeholder="e.g., 9899999999" required>
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g., 9899999999" required inputmode="tel" autocomplete="tel">
+                            <span class="error-message">Enter valid 10-15 digit phone number</span>
                         </div>
                         <div class="form-group">
-                            <label>Current Country *</label>
-                            <input type="text" id="country" name="country" value="India" required>
+                            <label for="country">Current Country *</label>
+                            <input type="text" id="country" name="country" value="India" required autocomplete="country-name">
+                            <span class="error-message">Please enter your current country</span>
                         </div>
                         <div class="form-group">
-                            <label>Highest Qualification *</label>
+                            <label for="f_baseline">Highest Qualification *</label>
                             <select id="f_baseline" name="qualification" required>
                                 <option value="">Select Qualification</option>
                                 <option value="10th">10th</option>
@@ -1661,9 +1679,10 @@
                                 <option value="Bachelor's Degree">Bachelor's Degree</option>
                                 <option value="Master's Degree">Master's Degree</option>
                             </select>
+                            <span class="error-message">Please select a qualification</span>
                         </div>
                         <div class="form-group">
-                            <label>Program Interested *</label>
+                            <label for="f_objective">Program Interested *</label>
                             <select id="f_objective" name="program" required>
                                 <option value="">Select Program</option>
                                 <option value="Korean Language">Korean Language</option>
@@ -1672,21 +1691,24 @@
                                 <option value="PhD">PhD</option>
                                 <option value="Research">Research</option>
                             </select>
+                            <span class="error-message">Please select a program</span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Preferred Intake *</label>
+                        <label for="intake">Preferred Intake *</label>
                         <select id="intake" name="intake" required>
                             <option value="">Select Intake</option>
                             <option value="Spring">Spring</option>
                             <option value="Fall">Fall</option>
                         </select>
+                        <span class="error-message">Please select an intake</span>
                     </div>
                     <div class="form-group">
-                        <label>Motivation to Apply *</label>
+                        <label for="motivation">Motivation to Apply *</label>
                         <textarea id="motivation" name="motivation" rows="4" placeholder="Why do you want to study in South Korea?" required></textarea>
+                        <span class="error-message">Please state your motivation</span>
                     </div>
-                    <button type="submit" class="submit-btn">Book My Free Consultation</button>
+                    <button type="submit" class="submit-btn" id="submitBtn">Book My Free Consultation</button>
                 </form>
             </div>
         </div>
@@ -1744,25 +1766,82 @@
                     navMenuUl.classList.toggle('active');
                 });
 
-                // Close mobile menu when clicking menu links
                 document.querySelectorAll('nav ul li a').forEach(link => {
                     link.addEventListener('click', function() {
                         navMenuUl.classList.remove('active');
                     });
                 });
 
-                // Close when clicking outside header
                 document.addEventListener('click', function(e) {
                     if (!e.target.closest('header')) {
                         navMenuUl.classList.remove('active');
                     }
                 });
             }
+
+            // Real-time input validation cleanup
+            const inputs = document.querySelectorAll('#cyberIntakeForm input, #cyberIntakeForm select, #cyberIntakeForm textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    validateField(this);
+                });
+                input.addEventListener('blur', function() {
+                    validateField(this);
+                });
+            });
         });
+
+        function validateField(field) {
+            const parent = field.parentElement;
+            let isValid = true;
+            const value = field.value.trim();
+
+            if (field.hasAttribute('required') && value === "") {
+                isValid = false;
+            } else if (field.type === 'email' && value !== "") {
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                isValid = emailRegex.test(value);
+            } else if (field.id === 'phone' && value !== "") {
+                const phoneRegex = /^\+?[0-9]{10,15}$/;
+                isValid = phoneRegex.test(value.replace(/[\s-]/g, ''));
+            }
+
+            if (!isValid) {
+                field.classList.add('invalid');
+                parent.classList.add('has-error');
+            } else {
+                field.classList.remove('invalid');
+                parent.classList.remove('has-error');
+            }
+
+            return isValid;
+        }
 
         document.getElementById('cyberIntakeForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
+            const inputs = document.querySelectorAll('#cyberIntakeForm input, #cyberIntakeForm select, #cyberIntakeForm textarea');
+            let isFormValid = true;
+
+            inputs.forEach(input => {
+                if (!validateField(input)) {
+                    isFormValid = false;
+                }
+            });
+
+            if (!isFormValid) {
+                const firstError = document.querySelector('.form-group.has-error input, .form-group.has-error select, .form-group.has-error textarea');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstError.focus();
+                }
+                return;
+            }
+
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.innerText = "Submitting...";
+            submitBtn.disabled = true;
+
             const payload = {
                 name: document.getElementById('f_name').value.trim(),
                 email: document.getElementById('f_email').value.trim(),
@@ -1778,14 +1857,17 @@
             const WHATSAPP_NUMBER = "8201041123006"; 
 
             if (GOOGLE_WEBAPP_URL && GOOGLE_WEBAPP_URL !== "") {
+                const formData = new URLSearchParams(payload);
+
                 fetch(GOOGLE_WEBAPP_URL, {
                     method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                }).then(() => {
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: formData.toString()
+                })
+                .then(() => {
                     redirectToWhatsApp(payload, WHATSAPP_NUMBER);
-                }).catch(err => {
+                })
+                .catch(err => {
                     console.error("Database tracking sync failed: ", err);
                     redirectToWhatsApp(payload, WHATSAPP_NUMBER);
                 });
