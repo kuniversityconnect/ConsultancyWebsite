@@ -1827,65 +1827,66 @@
         }
 
         document.getElementById('cyberIntakeForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+    e.preventDefault();
 
-            const inputs = document.querySelectorAll('#cyberIntakeForm input, #cyberIntakeForm select, #cyberIntakeForm textarea');
-            let isFormValid = true;
+    const inputs = document.querySelectorAll('#cyberIntakeForm input, #cyberIntakeForm select, #cyberIntakeForm textarea');
+    let isFormValid = true;
 
-            inputs.forEach(input => {
-                if (!validateField(input)) {
-                    isFormValid = false;
-                }
-            });
+    inputs.forEach(input => {
+        if (!validateField(input)) {
+            isFormValid = false;
+        }
+    });
 
-            if (!isFormValid) {
-                const firstError = document.querySelector('.form-group.has-error input, .form-group.has-error select, .form-group.has-error textarea');
-                if (firstError) {
-                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    firstError.focus();
-                }
-                return;
-            }
+    if (!isFormValid) {
+        const firstError = document.querySelector('.form-group.has-error input, .form-group.has-error select, .form-group.has-error textarea');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstError.focus();
+        }
+        return;
+    }
 
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.innerText = "Submitting...";
-            submitBtn.disabled = true;
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.innerText = "Submitting...";
+    submitBtn.disabled = true;
 
-            const payload = {
-                name: document.getElementById('f_name').value.trim(),
-                email: document.getElementById('f_email').value.trim(),
-                phone: document.getElementById('phone').value.trim(),
-                country: document.getElementById('country').value.trim(),
-                qualification: document.getElementById('f_baseline').value,
-                program: document.getElementById('f_objective').value,
-                intake: document.getElementById('intake').value,
-                motivation: document.getElementById('motivation').value.trim()
-            };
+    const payload = {
+        name: document.getElementById('f_name').value.trim(),
+        email: document.getElementById('f_email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        country: document.getElementById('country').value.trim(),
+        qualification: document.getElementById('f_baseline').value,
+        program: document.getElementById('f_objective').value,
+        intake: document.getElementById('intake').value,
+        motivation: document.getElementById('motivation').value.trim()
+    };
 
-            const GOOGLE_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwK9Fn_Fi_us0ADL1B37uB9k_0U-3wBYKfPzRzkvVYAfn1OLB_F-3SStWJ8pkoS-JzY/exec"; 
-            const WHATSAPP_NUMBER = "8201041123006"; 
+    const GOOGLE_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwK9Fn_Fi_us0ADL1B37uB9k_0U-3wBYKfPzRzkvVYAfn1OLB_F-3SStWJ8pkoS-JzY/exec"; 
+    const WHATSAPP_NUMBER = "8201041123006"; 
 
-            if (GOOGLE_WEBAPP_URL && GOOGLE_WEBAPP_URL !== "") {
-                const formData = new URLSearchParams(payload);
-
-                fetch(GOOGLE_WEBAPP_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: formData.toString()
-                })
-                .then(() => {
-                    redirectToWhatsApp(payload, WHATSAPP_NUMBER);
-                })
-                .catch(err => {
-                    console.error("Database tracking sync failed: ", err);
-                    redirectToWhatsApp(payload, WHATSAPP_NUMBER);
-                });
-            } else {
+    if (GOOGLE_WEBAPP_URL && GOOGLE_WEBAPP_URL !== "") {
+        fetch(GOOGLE_WEBAPP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(payload)
+        })
+        .then(() => {
+            // Small delay to ensure network payload dispatch before redirection
+            setTimeout(() => {
                 redirectToWhatsApp(payload, WHATSAPP_NUMBER);
-            }
+            }, 300);
+        })
+        .catch(err => {
+            console.error("Database tracking sync failed: ", err);
+            redirectToWhatsApp(payload, WHATSAPP_NUMBER);
         });
-
+    } else {
+        redirectToWhatsApp(payload, WHATSAPP_NUMBER);
+    }
+});
+        
         function redirectToWhatsApp(data, number) {
             const rawWhatsappText = `*NEW STUDENT INTAKE REGISTRATION*\n` +
                                     `===============================\n\n` +
